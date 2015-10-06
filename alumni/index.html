@@ -21,7 +21,7 @@
     <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
     <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
 
-    <title>Software | Yeo Lab Dr. Gene Yeo's Laboratory at UC San Diego</title>
+    <title>Yeo Lab Dr. Gene Yeo's Laboratory at UC San Diego</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width">
 </head>
@@ -49,13 +49,22 @@
     </header>
 
 <!-- Main -->
+<style>
+.image:before{
+  background-image: None;
+}
+.image.feature img{
+  /*Make headshots circles*/
+  border-radius: 50%;
+}
+</style>
 <article id="main">
 
   <header class="special container">
     <span class="icon fa-mobile"></span>
-    <h2>Software</h2>
+    <h2>Alumni</h2>
     <!-- add page sub title here -->
-    <p>Where that in the center faces the nameless horrors alone.</p>
+    <p>Team RNA.</p>
   </header>
 
   <!-- One -->
@@ -63,36 +72,36 @@
 
     <!-- Content -->
       <div class="content">
-        <section>
-          <!-- <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a> -->
-          <p><h2>Yeo Lab&nbsp;Software</h2>
-<h3><code>flotilla</code></h3>
-<p>A framework for integrated single-cell <span class="caps">RNA</span>-seq analysis.
-<a href="https://github.com/YeoLab/flotilla">Github</a>,
-<a href="https://pypi.python.org/pypi/flotilla">PyPI</a>.</p>
-<h3><code>CLIPper</code></h3>
-<p>A tool to identify <span class="caps">CLIP</span>-seq peaks
-<a href="https://github.com/YeoLab/clipper">Github</a>,
-<a href="https://pypi.python.org/pypi/clipper/">PyPI</a>,
-<a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3918504/">Publication</a></p>
-<h3>RNAbind</h3>
-<p>A tool to visualize hnRNP dependent splicing events and hnRNP binding sites within genes
-<a href="http://rnabind.ucsd.edu/">Website</a>,
-<a href="http://www.ncbi.nlm.nih.gov/pubmed/22574288">Publication</a>.</p>
-<h2>Gene Yeo&#8217;s&nbsp;algorithms</h2>
-<p><a href="http://genes.mit.edu/burgelab/maxent/Xmaxentscan_scoreseq.html">Maximum Entropy Splice Site Model (MaxENTScan)</a><br>
-<a href="http://genes.mit.edu/burgelab/rescue-ese/"><span class="caps">RESCUE</span>-<span class="caps">ESE</span> Webserver</a><br>
-<a href="http://genes.mit.edu/acescan/">ACEScan Webserver</a><br></p></p>
-        </section>
+
+          <section>
+            <h3>Graduate Students</h3>
+            <div class="row">
+              <div class="2u">
+                 <!-- The initial slash is important because otherwise the links
+                  are relative to the "people" page -->
+                  <a href="/melissa-wilbert" class="image feature">
+                    <img src="/images/people/botvinnik_olga_headshot.jpeg" alt="Melissa&nbsp;Wilbert"/>
+                  Melissa&nbsp;Wilbert
+                    <strong>Novartis, Boston, MA</strong><br>
+                    2008-2014<br>
+                </a>
+              </div>
+
+                <!-- If it's the last person in the section or we've gotten to
+                6 people ("2u" class means out of the 12 columns of the webpage,
+                each person's photo and name will take up 2 units, hence divisible
+                by 6), close the row -->
+                  </div>
+
+         <!-- Close the section if we're out of people -->
+         </section>
+
+      
       </div>
 
   </section>
 
-  <!-- Two -->
-    <section class="wrapper style1 container special">
-        <div class="row">
-        </div>
-    </section>
+
   </article>
 
 <!-- Footer -->
