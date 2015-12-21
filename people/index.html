@@ -27,26 +27,26 @@
     </style>
 
     <!-- Favicon for all devices and sizes -->
-    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
-    <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128" />
     <meta name="application-name" content="&nbsp;"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
-    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
-    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
-    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
-    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
-    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
 
 
     <title>Yeo Lab Yeo Lab</title>
@@ -80,22 +80,9 @@
 
 <!-- Toggle serious/silly photo -->
 <script>
-if (document.images) {
-    img1on = new Image();   img1on.src = "/images/people/lab_photo_silly_2015_Apr_30_00015.jpg";
-    img1off = new Image();  img1off.src = "/images/people/lab_photo_2015_Apr_30_00015.jpg";
+function setImage(element, url) {
+  jQuery(element).find('img')[0].src = url;
 }
-function imgOn(imgName) {
-        if (document.images) {
-            document[imgName].src = eval(imgName + "on.src");
-        }
-}
-function imgOff(imgName) {
-        if (document.images) {
-            document[imgName].src = eval(imgName + "off.src");
-        }
-}
-
-
 </script>
 
 
@@ -123,6 +110,18 @@ background: #CFF4EF;}
   width: 100%;
   margin-bottom: 5em;
 }
+.headshot-placeholder {
+    background-image: "/image/people/headshot_placeholder.png";
+    display: flex;
+    border-radius: 50%;
+    /*height: 142px;*/
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 124px;
+    font-weight: bold;
+    font-family: 'Open Sans';
+}
 </style>
 
 
@@ -139,8 +138,9 @@ background: #CFF4EF;}
   <section class="wrapper style4 container">
 
     <div class="row labphoto">
-      <a onmouseover="imgOn('img1');" onmouseout="imgOff('img1');" alt="#YEOLO" name="img1">
-    <!-- <img src="/images/people/lab_photo_2015_Apr_30_00015.jpg" alt="#YEOLO" name="img1"/> -->
+      <a onmouseover="setImage(this, '/images/people/2015_lab_photo_silly.png');"
+      onmouseout="setImage(this, '/images/people/2015_lab_photo.png');" alt="#YEOLO">
+    <img src="/images/people/2015_lab_photo.png" alt="#YEOLO" name="img1" width="100%"/>
   </a>
   </div>
     <!-- Content -->
@@ -184,7 +184,10 @@ background: #CFF4EF;}
                  <!-- The initial slash is important because otherwise the links
                   are relative to the "people" page -->
                   <a href="/stefan-aigner" class="image feature">
-                    <img src="/yeolab_favicon.svg" alt="Stefan&nbsp;Aigner"/>
+                  <div class="headshot-placeholder">
+                    S
+                    <img src="/images/people/headshot_placeholder.png">
+                  </div>
                   Stefan&nbsp;Aigner
                 </a>
               </div>
@@ -342,7 +345,10 @@ background: #CFF4EF;}
                  <!-- The initial slash is important because otherwise the links
                   are relative to the "people" page -->
                   <a href="/jaclyn-einstein" class="image feature">
-                    <img src="/yeolab_favicon.svg" alt="Jaclyn&nbsp;Einstein"/>
+                  <div class="headshot-placeholder">
+                    J
+                    <img src="/images/people/headshot_placeholder.png">
+                  </div>
                   Jaclyn&nbsp;Einstein
                 </a>
               </div>
@@ -500,7 +506,10 @@ background: #CFF4EF;}
                  <!-- The initial slash is important because otherwise the links
                   are relative to the "people" page -->
                   <a href="/jasmine-kyung" class="image feature">
-                    <img src="/yeolab_favicon.svg" alt="Jasmine&nbsp;Kyung"/>
+                  <div class="headshot-placeholder">
+                    J
+                    <img src="/images/people/headshot_placeholder.png">
+                  </div>
                   Jasmine&nbsp;Kyung
                 </a>
               </div>
@@ -530,7 +539,10 @@ background: #CFF4EF;}
                  <!-- The initial slash is important because otherwise the links
                   are relative to the "people" page -->
                   <a href="/grace-chen" class="image feature">
-                    <img src="/yeolab_favicon.svg" alt="Grace&nbsp;Chen"/>
+                  <div class="headshot-placeholder">
+                    G
+                    <img src="/images/people/headshot_placeholder.png">
+                  </div>
                   Grace&nbsp;Chen
                 </a>
               </div>
@@ -540,7 +552,10 @@ background: #CFF4EF;}
                  <!-- The initial slash is important because otherwise the links
                   are relative to the "people" page -->
                   <a href="/jade-laguer" class="image feature">
-                    <img src="/yeolab_favicon.svg" alt="Jade&nbsp;Laguer"/>
+                  <div class="headshot-placeholder">
+                    J
+                    <img src="/images/people/headshot_placeholder.png">
+                  </div>
                   Jade&nbsp;Laguer
                 </a>
               </div>
