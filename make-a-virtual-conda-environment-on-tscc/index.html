@@ -1,0 +1,186 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/skel-layers.min.js"></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/lightbox.js"></script>
+    <link rel="stylesheet" href="/css/pygment.css"/>
+    <noscript>
+        <link rel="stylesheet" href="/css/skel.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/style-noscript.css" />
+        <link href="/css/lightbox.css" rel="stylesheet"/>
+    </noscript>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.3.41/css/materialdesignicons.min.css">
+    <link  href="http://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+    <style>
+    body, #skel-layers-wrapper {
+    background: #CFF4EF;}
+    </style>
+
+    <!-- Favicon for all devices and sizes -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
+
+
+    <title>Make a virtual conda environment on TSCC | Yeo Lab </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+</head>
+
+<body class=" loading">
+
+
+
+    <!-- Header -->
+    <header id="header" >
+        <h1 class="logo">
+            <a href="..">Yeo Lab</a>
+        </h1>
+        <nav id="nav">
+            <ul>
+                <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
+                    <li><a href="/research/">Research</a></li>
+                    <li><a href="/papers/">Papers</a></li>
+                    <li><a href="/funding/">Funding</a></li>
+                    <li><a href="/software/">Software</a></li>
+                    <li><a href="/links/">Links</a></li>
+                <li><a href="/people" class="button special">People</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<style>
+.image:before{
+  background-image: None;
+}
+.mdi {
+  font-size: 9em;
+  margin-top: -150px;
+}
+
+</style>
+
+
+<!-- Main -->
+<article id="main">
+
+  <header class="special container">
+    <span class="mdi mdi-account-multiple"></span>
+    <h2>Make a virtual conda environment on <span class="caps">TSCC</span></h2>
+    <!-- add page sub title here -->
+    <!-- <p>Where that in the center faces the nameless horrors alone.</p> -->
+  </header>
+
+  <!-- One -->
+  <section class="wrapper style4 container">
+
+    <!-- Content -->
+      <div class="content">
+        <section>
+          <!-- <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a> -->
+          <p><h1>Make a virtual conda environment on <span class="caps">TSCC</span></h1>
+<p><strong>Authors</strong>: Clarence Mah, Brian Yee<br>
+<strong>Last Updated</strong>:&nbsp;5-07-20</p>
+<p>If you need to install or run a particular software, you&#8217;ve got two&nbsp;options:</p>
+<ol>
+<li>Run a systemwide copy via&nbsp;modules</li>
+<li>Install it yourself (typically straightforward with&nbsp;conda).</li>
+</ol>
+<h2>Installing software yourself with conda&nbsp;environments</h2>
+<p><strong><span class="caps">WARNING</span></strong> - this is easy to get messed up. While this is a nice tool, it is not absolutely necessary upon initial setup and might be best to wait and configure environments after you have a better understanding of how they&nbsp;work.</p>
+<p>On <span class="caps">TSCC</span>, the easiest way to create a virtual environment is by making one via conda. Here’s how you do it (replace <code>myenv</code> with the name of your choice, and <code>python=3.6 samtools</code> with the packages (space-delimited) you want to&nbsp;install):</p>
+<div class="highlight"><pre><span></span><span class="err">conda create --name myenv python=3.6 samtools</span>
+</pre></div>
+
+
+<p>The previous command shows how you can specify (or not) the version you want to have installed in a particular environment. In this case, we want python3.6 and the latest compatible samtools version in this&nbsp;environment.</p>
+<p><strong>Note:</strong> You can also create an environment using <code>conda</code> to install all the Anaconda Python packages, and then using <code>pip</code> in the environment to install the remaining packages, like&nbsp;so:</p>
+<div class="highlight"><pre><span></span><span class="err">conda create --yes --name ENVIRONMENT_NAME pip numpy scipy cython matplotlib nose six scikit-learn jupyter networkx pandas tornado statsmodels setuptools pytest pyzmq jinja2 pyyaml pymongo biopython markupsafe seaborn joblib semantic_version</span>
+<span class="err">source activate ENVIRONMENT_NAME</span>
+<span class="err">conda install --yes --channel https://conda.binstar.org/daler pybedtools</span>
+<span class="err">conda install --yes --channel https://conda.binstar.org/kyleabeauchamp fastcluster</span>
+<span class="err">pip install gspread brewer2mpl husl gffutils matplotlib-venn HTSeq misopy</span>
+<span class="err">pip install https://github.com/YeoLab/clipper/tarball/master</span>
+<span class="err">pip install https://github.com/YeoLab/gscripts/tarball/master</span>
+<span class="err">pip install https://github.com/YeoLab/flotilla/tarball/master</span>
+</pre></div>
+
+
+<p>These commands is how the <code>base</code> environment was&nbsp;created.</p>
+<p>Then activate your environment&nbsp;with:</p>
+<div class="highlight"><pre><span></span><span class="err">source activate $USER</span>
+</pre></div>
+
+
+<p>You’ll probably stay in this environment all the&nbsp;time.</p>
+<h2>Warning:</h2>
+<p>Make sure to add <code>source activate $USER</code> to your <code>~/.bashrc</code> file! Then you will always be in your&nbsp;environment</p>
+<p>If you need to switch to another environment, then exit your environment&nbsp;with:</p>
+<div class="highlight"><pre><span></span><span class="err">source deactivate</span>
+</pre></div></p>
+        </section>
+      </div>
+
+  </section>
+
+  <!-- Two -->
+  <!--     <section class="wrapper style1 container special">
+        <div class="row">
+        </div>
+    </section> -->
+
+  </article>
+
+<!-- Footer -->
+
+<style>
+#footer .mdi{
+  font-size: 4em;
+}
+</style>
+
+<footer id="footer">
+
+    <ul class="icons">
+        <li>
+          <a href="http://github.com/yeolab" class="mdi mdi-github-circle"><span class="label"></span></a>
+        </li>
+        <li>
+          <a href="http://twitter.com/yeo_lab" class="mdi mdi-twitter-circle"><span class="label"></span></a>
+        </li>
+    </ul>
+
+    <span class="copyright">&copy; Yeo Lab. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+
+</footer>
+</body>
+</html>

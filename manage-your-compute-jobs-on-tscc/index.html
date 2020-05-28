@@ -1,0 +1,254 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.dropotron.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/skel-layers.min.js"></script>
+    <script src="/js/init.js"></script>
+    <script src="/js/lightbox.js"></script>
+    <link rel="stylesheet" href="/css/pygment.css"/>
+    <noscript>
+        <link rel="stylesheet" href="/css/skel.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/style-noscript.css" />
+        <link href="/css/lightbox.css" rel="stylesheet"/>
+    </noscript>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/1.3.41/css/materialdesignicons.min.css">
+    <link  href="http://fonts.googleapis.com/css?family=Anonymous+Pro:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" >
+    <!--[if lte IE 8]><link rel="stylesheet" href="/css/ie/v8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="/css/ie/v9.css" /><![endif]-->
+    <style>
+    body, #skel-layers-wrapper {
+    background: #CFF4EF;}
+    </style>
+
+    <!-- Favicon for all devices and sizes -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png" />
+
+
+    <title>Manage your compute jobs on TSCC | Yeo Lab </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width">
+</head>
+
+<body class=" loading">
+
+
+
+    <!-- Header -->
+    <header id="header" >
+        <h1 class="logo">
+            <a href="..">Yeo Lab</a>
+        </h1>
+        <nav id="nav">
+            <ul>
+                <!-- <li class="current"><a href="index.html">Welcome</a></li> -->
+                    <li><a href="/research/">Research</a></li>
+                    <li><a href="/papers/">Papers</a></li>
+                    <li><a href="/funding/">Funding</a></li>
+                    <li><a href="/software/">Software</a></li>
+                    <li><a href="/links/">Links</a></li>
+                <li><a href="/people" class="button special">People</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<style>
+.image:before{
+  background-image: None;
+}
+.mdi {
+  font-size: 9em;
+  margin-top: -150px;
+}
+
+</style>
+
+
+<!-- Main -->
+<article id="main">
+
+  <header class="special container">
+    <span class="mdi mdi-account-multiple"></span>
+    <h2>Manage your compute jobs on <span class="caps">TSCC</span></h2>
+    <!-- add page sub title here -->
+    <!-- <p>Where that in the center faces the nameless horrors alone.</p> -->
+  </header>
+
+  <!-- One -->
+  <section class="wrapper style4 container">
+
+    <!-- Content -->
+      <div class="content">
+        <section>
+          <!-- <a href="#" class="image feature"><img src="images/pic04.jpg" alt="" /></a> -->
+          <p><h1>Manage your compute jobs on <span class="caps">TSCC</span></h1>
+<p><strong>Authors</strong>: Clarence Mah, Brian Yee<br>
+<strong>Last Updated</strong>:&nbsp;5-07-20</p>
+<h2>Submit&nbsp;jobs</h2>
+<p>To submit a script that you wrote, in this case called <code>myscript.sh</code>, to <span class="caps">TSCC</span>,&nbsp;do:</p>
+<div class="highlight"><pre><span></span><span class="err">qsub -q home-yeo -l nodes=1:ppn=2 -l walltime=0:30:00 myscript.sh</span>
+</pre></div>
+
+
+<ul>
+<li><code>-q home-yeo</code> specifies which queue your job is submitted&nbsp;to</li>
+<li><code>-l nodes=1:ppn=2</code> requests 1 node and 2 processors per&nbsp;node</li>
+<li><code>-l walltime=0:30:00</code> reserves the requested nodes for 30&nbsp;minutes</li>
+</ul>
+<h2>Submit interactive&nbsp;jobs</h2>
+<p>To submit interactive jobs, add the <code>-I</code> interactive&nbsp;flag:</p>
+<div class="highlight"><pre><span></span><span class="err">qsub -I -q home-yeo -l nodes=1:ppn=2 -l walltime=0:30:00</span>
+</pre></div>
+
+
+<h2>Helpful&nbsp;hints</h2>
+<p>Unless your software/module utilizes <span class="caps">MPI</span> (if you don&#8217;t know what <span class="caps">MPI</span>, is don&#8217;t worry about it), you will only need 1 node (<code>nodes=1</code>) per job. Most jobs (such as running Jupyter) require only 1-2 ppn (<code>ppn=1</code>), however memory-intensive jobs (ie. <span class="caps">STAR</span>) may require up to 8&nbsp;ppn.</p>
+<p>Generally speaking, you cannot modify walltime after your job request is granted. So if you think 2 hours to run a job, best to request 3 or 4 hours of walltime (<code>walltime=3:00:00</code>).</p>
+<h2>Check job status, aka “why is my job&nbsp;stuck?”</h2>
+<p>Check the status of your jobs (replace bay001 with your&nbsp;username):</p>
+<div class="highlight"><pre><span></span><span class="err">qstat -u bay001</span>
+</pre></div>
+
+
+<p>outputs:</p>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="n">brian</span><span class="p">)</span><span class="o">[</span><span class="n">bay001@tscc-login2 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="n">qstat</span><span class="w"> </span><span class="o">-</span><span class="n">u</span><span class="w"> </span><span class="n">bay001</span><span class="w"></span>
+
+<span class="n">tscc</span><span class="o">-</span><span class="n">mgr</span><span class="p">.</span><span class="n">sdsc</span><span class="p">.</span><span class="nl">edu</span><span class="p">:</span><span class="w"></span>
+<span class="w">                                                                                  </span><span class="n">Req</span><span class="s1">&#39;d    Req&#39;</span><span class="n">d</span><span class="w">       </span><span class="n">Elap</span><span class="w"></span>
+<span class="n">Job</span><span class="w"> </span><span class="n">ID</span><span class="w">                  </span><span class="n">Username</span><span class="w">    </span><span class="n">Queue</span><span class="w">    </span><span class="n">Jobname</span><span class="w">          </span><span class="n">SessID</span><span class="w">  </span><span class="n">NDS</span><span class="w">   </span><span class="n">TSK</span><span class="w">   </span><span class="n">Memory</span><span class="w">   </span><span class="nc">Time</span><span class="w">    </span><span class="n">S</span><span class="w">   </span><span class="nc">Time</span><span class="w"></span>
+<span class="c1">----------------------- ----------- -------- ---------------- ------ ----- ------ ------ --------- - ---------</span>
+<span class="mf">2006527.</span><span class="n">tscc</span><span class="o">-</span><span class="n">mgr</span><span class="p">.</span><span class="k">local</span><span class="w">  </span><span class="n">bay001</span><span class="w">      </span><span class="n">home</span><span class="o">-</span><span class="n">yeo</span><span class="w"> </span><span class="n">STDIN</span><span class="w">             </span><span class="mi">35367</span><span class="w">     </span><span class="mi">1</span><span class="w">     </span><span class="mi">16</span><span class="w">    </span><span class="c1">--   04:00:00 R  02:35:36</span>
+<span class="mf">2007542.</span><span class="n">tscc</span><span class="o">-</span><span class="n">mgr</span><span class="p">.</span><span class="k">local</span><span class="w">  </span><span class="n">bay001</span><span class="w">      </span><span class="n">home</span><span class="o">-</span><span class="n">yeo</span><span class="w"> </span><span class="n">STDIN</span><span class="w">              </span><span class="mi">6168</span><span class="w">     </span><span class="mi">1</span><span class="w">      </span><span class="mi">1</span><span class="w">    </span><span class="c1">--   08:00:00 R  00:28:08</span>
+<span class="mf">2007621.</span><span class="n">tscc</span><span class="o">-</span><span class="n">mgr</span><span class="p">.</span><span class="k">local</span><span class="w">  </span><span class="n">bay001</span><span class="w">      </span><span class="n">home</span><span class="o">-</span><span class="n">yeo</span><span class="w"> </span><span class="n">STDIN</span><span class="w">               </span><span class="c1">--      1     16    --   04:00:00 Q       --</span>
+</pre></div>
+
+
+<h2>Check job status of array&nbsp;jobs</h2>
+<p>Check the status of your array jobs, you need to specify <code>-t</code> to see the status of the individual array&nbsp;pieces.</p>
+<div class="highlight"><pre><span></span><span class="err">qstat -t</span>
+</pre></div>
+
+
+<h2>Killing&nbsp;jobs</h2>
+<p>If you have a job you want to stop, kill it with <code>qdel JOBID</code>,&nbsp;e.g.</p>
+<div class="highlight"><pre><span></span><span class="err">qdel 2006527</span>
+</pre></div>
+
+
+<h2>Kill an array&nbsp;job</h2>
+<p>If the job is an array job, you’ll need to add brackets, like&nbsp;this:</p>
+<div class="highlight"><pre><span></span><span class="err">qdel 2006527[]</span>
+</pre></div>
+
+
+<h2>Kill <span class="caps">ALL</span> your&nbsp;jobs</h2>
+<p>To kill all the jobs that you’ve submitted,&nbsp;do:</p>
+<div class="highlight"><pre><span></span><span class="err">qdel $(qselect -u $USER)</span>
+</pre></div>
+
+
+<h2>Which queue do I submit to? (check status of&nbsp;queues)</h2>
+<p>Check the status of the queue (so you know which queues to <span class="caps">NOT</span> submit to!). Generally, <code>home-yeo</code> queues move more quickly but we also have condo and hotel available to us should <code>home-yeo</code> queues be&nbsp;full.</p>
+<div class="highlight"><pre><span></span><span class="err">qstat -q</span>
+</pre></div>
+
+
+<p>Example output&nbsp;is,</p>
+<div class="highlight"><pre><span></span><span class="p">(</span><span class="n">olga</span><span class="p">)</span><span class="o">[</span><span class="n">obotvinnik@tscc-login2 ~</span><span class="o">]</span><span class="err">$</span><span class="w"> </span><span class="n">qstat</span><span class="w"> </span><span class="o">-</span><span class="n">q</span><span class="w"></span>
+
+<span class="nl">server</span><span class="p">:</span><span class="w"> </span><span class="n">tscc</span><span class="o">-</span><span class="n">mgr</span><span class="p">.</span><span class="k">local</span><span class="w"></span>
+
+<span class="n">Queue</span><span class="w">            </span><span class="n">Memory</span><span class="w"> </span><span class="n">CPU</span><span class="w"> </span><span class="nc">Time</span><span class="w"> </span><span class="n">Walltime</span><span class="w"> </span><span class="n">Node</span><span class="w">  </span><span class="n">Run</span><span class="w"> </span><span class="n">Que</span><span class="w"> </span><span class="n">Lm</span><span class="w">  </span><span class="k">State</span><span class="w"></span>
+<span class="c1">---------------- ------ -------- -------- ----  --- --- --  -----</span>
+<span class="n">home</span><span class="o">-</span><span class="n">dkeres</span><span class="w">        </span><span class="c1">--      --       --      --    2   0 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">komunjer</span><span class="w">      </span><span class="c1">--      --       --      --    0   0 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">ong</span><span class="w">           </span><span class="c1">--      --       --      --    2   0 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">tg</span><span class="w">            </span><span class="c1">--      --       --      --    0   0 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">yeo</span><span class="w">           </span><span class="c1">--      --       --      --    3   1 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">visres</span><span class="w">        </span><span class="c1">--      --       --      --    0   0 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">mccammon</span><span class="w">      </span><span class="c1">--      --       --      --   15  29 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">scrm</span><span class="w">          </span><span class="c1">--      --       --      --    1   0 --   E R</span>
+<span class="n">hotel</span><span class="w">              </span><span class="c1">--      --    168:00:0   --  232  26 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">k4zhang</span><span class="w">       </span><span class="c1">--      --       --      --    0   0 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">kkey</span><span class="w">          </span><span class="c1">--      --       --      --    0   0 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">kyang</span><span class="w">         </span><span class="c1">--      --       --      --    2   1 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">jsebat</span><span class="w">        </span><span class="c1">--      --       --      --    1   0 --   E R</span>
+<span class="n">pdafm</span><span class="w">              </span><span class="c1">--      --    72:00:00   --    1   0 --   E R</span>
+<span class="n">condo</span><span class="w">              </span><span class="c1">--      --    08:00:00   --   18   6 --   E R</span>
+<span class="n">gpu</span><span class="o">-</span><span class="n">hotel</span><span class="w">          </span><span class="c1">--      --    336:00:0   --    0   0 --   E R</span>
+<span class="n">glean</span><span class="w">              </span><span class="c1">--      --       --      --   24  75 --   E R</span>
+<span class="n">gpu</span><span class="o">-</span><span class="n">condo</span><span class="w">          </span><span class="c1">--      --    08:00:00   --   16  36 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">fpaesani</span><span class="w">      </span><span class="c1">--      --       --      --    4   2 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">builder</span><span class="w">       </span><span class="c1">--      --       --      --    0   0 --   E R</span>
+<span class="n">home</span><span class="w">               </span><span class="c1">--      --       --      --    0   0 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">mgilson</span><span class="w">       </span><span class="c1">--      --       --      --    0   4 --   E R</span>
+<span class="n">home</span><span class="o">-</span><span class="n">eallen</span><span class="w">        </span><span class="c1">--      --       --      --    0   0 --   E R</span>
+<span class="w">                                               </span><span class="c1">----- -----</span>
+<span class="w">                                                 </span><span class="mi">321</span><span class="w">   </span><span class="mi">180</span><span class="w"></span>
+</pre></div>
+
+
+<p>So right now is not a good time to submit to the <code>hotel</code> queue, since it has a bunch of both running and queued&nbsp;jobs!</p></p>
+        </section>
+      </div>
+
+  </section>
+
+  <!-- Two -->
+  <!--     <section class="wrapper style1 container special">
+        <div class="row">
+        </div>
+    </section> -->
+
+  </article>
+
+<!-- Footer -->
+
+<style>
+#footer .mdi{
+  font-size: 4em;
+}
+</style>
+
+<footer id="footer">
+
+    <ul class="icons">
+        <li>
+          <a href="http://github.com/yeolab" class="mdi mdi-github-circle"><span class="label"></span></a>
+        </li>
+        <li>
+          <a href="http://twitter.com/yeo_lab" class="mdi mdi-twitter-circle"><span class="label"></span></a>
+        </li>
+    </ul>
+
+    <span class="copyright">&copy; Yeo Lab. All rights reserved. Design: <a href="http://html5up.net">HTML5 UP</a>.</span>
+
+</footer>
+</body>
+</html>
